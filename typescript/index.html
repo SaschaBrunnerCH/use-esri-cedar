@@ -1,10 +1,27 @@
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, maximum-scale=1,user-scalable=no"
+    />
     <title>ArcGIS JSAPI 4 TypeScript Demo</title>
-    <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
-    <link rel="stylesheet" href="./src/css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.11/esri/css/main.css"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <!-- load the amCharts base library -->
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <!-- in this case, we only need bar charts, so we'll load the appropriate amCharts script -->
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <!-- load the arcgis-rest-js scripts -->
+    <script src="https://unpkg.com/@esri/arcgis-rest-request"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-feature-layer"></script>
+    <!-- optionally load an amcharts theme; cedar provides a calcite theme -->
+    <script src="https://unpkg.com/@esri/cedar/dist/umd/themes/amCharts/calcite.js"></script>
+    <!-- load cedar -->
+    <script src="https://unpkg.com/@esri/cedar/dist/umd/cedar.js"></script>
     <script>
       var locationPath = location.pathname.replace(/\/[^\/]+$/, "/");
       window.dojoConfig = {
@@ -19,7 +36,10 @@
     <script src="https://js.arcgis.com/4.11/"></script>
   </head>
   <body>
+    <div id="chart"></div>
     <div id="viewDiv"></div>
-    <script>require(["app/main"]);</script>
+    <script>
+      require(["app/main"]);
+    </script>
   </body>
 </html>

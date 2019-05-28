@@ -1,7 +1,6 @@
 import FeatureLayer = require("esri/layers/FeatureLayer");
 import Map = require("esri/Map");
 import MapView = require("esri/views/MapView");
-import cedar = require("@esri/cedar")
 
 const map = new Map({
     basemap: "topo"
@@ -67,11 +66,12 @@ const definition: any = {
     ]
 };
 
+declare var cedar:any;
 const cedarChart = new cedar.Chart("chart", definition);
 cedarChart.show();
 
 view.watch("extent", function (newValue) {
     var newExtent = JSON.stringify(newValue);
-    cedarChart.datasets()[0].query = newExtent;
+    cedarChart.datasets()[0].query.geometry = newExtent;
     cedarChart.show();
 });
