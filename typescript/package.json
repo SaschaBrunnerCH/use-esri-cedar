@@ -1,0 +1,26 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "template",
+  "scripts": {
+    "dev": "tsc -w",
+    "lint": "tslint './src/*.ts'"
+  },
+  "keywords": [
+    "esri",
+    "typescript"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "tslint": "^4.2.0"
+  },
+  "dependencies": {
+    "@esri/arcgis-rest-feature-layer": "^2.0.0",
+    "@esri/arcgis-rest-request": "^2.0.0",
+    "@esri/cedar": "^1.0.1",
+    "@types/arcgis-js-api": "^4.11.0",
+    "@types/dojo": "1.9.41",
+    "typescript": "3.3"
+  }
+}
